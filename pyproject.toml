@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "busyserve"
+version = "0.1.0"
+description = ""
+authors = ["JnyJny <erik.oshaughnessy@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/JnyJny/busyserve.git"
+packages = [ {include = "busyserve"} ]
+
+[tool.poetry.scripts]
+busyserve = "busyserve.__main__:cli"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+busylight-for-humans = "^0.21.2"
+starlite = "^1.17.1"
+uvicorn = "^0.18.3"
+typer = {extras = ["rich"], version = "^0.6.1"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.8.0"
+mypy = "^0.971"
+
+[tool.pytest.ini_options]
+addopts = "-p no:warnings"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
