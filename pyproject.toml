@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "busyserve"
 version = "0.1.0"
-description = ""
+description = "API Server for Busylight for Humans™"
 authors = ["JnyJny <erik.oshaughnessy@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
@@ -12,7 +12,7 @@ packages = [ {include = "busyserve"} ]
 busyserve = "busyserve.__main__:cli"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.7"
 busylight-for-humans = "^0.21.2"
 starlite = "^1.17.1"
 uvicorn = "^0.18.3"
